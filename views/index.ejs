@@ -1,0 +1,31 @@
+<%- include("header") -%>
+<!-- ----------- -->
+
+<div class="box" id="heading">
+  <h1>Bajaj Finserve</h1>
+</div>
+
+<form action="/" method="GET">
+  <label for="search">Search by Name:</label>
+  <input type="text" id="search" name="search" placeholder="Enter name" />
+  <button type="submit">Search</button>
+</form>
+
+<h2>Developers</h2>
+
+<% if (jsonData && jsonData.length > 0) { %>
+<ul>
+  <% jsonData.forEach(dev => { %>
+  <li>
+    <h3>Name: <%= dev.name %></h3>
+    <p>Designation: <%= dev.designation %></p>
+    <p>Skills: <%= dev.skills.join(', ') %></p>
+  </li>
+  <% }); %>
+</ul>
+<% } else { %>
+<p>No developers found.</p>
+<% } %>
+
+<!-- ----------- -->
+<%- include("footer") -%>
