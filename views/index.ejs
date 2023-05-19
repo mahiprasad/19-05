@@ -27,5 +27,32 @@
 <p>No developers found.</p>
 <% } %>
 
+<!-- ----------------------------- -->
+
+<h2>Projects</h2>
+
+<% if (jsonData && jsonData.length > 0) { %>
+<table>
+  <thead>
+    <tr>
+      <th>Project Name</th>
+      <th>Team Size</th>
+      <th>Completed Tasks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% jsonData.forEach(project => { %>
+    <tr>
+      <td><%= project.name %></td>
+      <td><%= project.teamSize %></td>
+      <td><%= project.completedTasks %></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+<% } else { %>
+<p>No projects found.</p>
+<% } %>
+
 <!-- ----------- -->
 <%- include("footer") -%>
