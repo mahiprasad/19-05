@@ -1,0 +1,18 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+  <form action="/" method="post">
+    <div class="item">
+      <p><%= newListItems.name %></p>
+    </div>
+    <input type="hidden" name="listName" value="<%= listTitle %>" />
+  </form>
+
+  <% }) %>
+</div>
+
+<%- include("footer") -%>
