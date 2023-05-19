@@ -9,9 +9,13 @@ h1 {
   color: #fff;
   padding: 10px;
 }
+h2 {
+  color: #A683E3;
+  padding: 10px;
+}
 
 .box {
-  max-width: 400px;
+  max-width: 40rem;
   margin: 50px auto;
   background: white;
   border-radius: 5px;
@@ -58,7 +62,7 @@ form.item {
 
 button {
   min-height: 50px;
-  width: 50px;
+  width: 7rem;
   border-radius: 50%;
   border-color: transparent;
   background-color: #A683E3;
