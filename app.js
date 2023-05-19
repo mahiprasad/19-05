@@ -15,6 +15,7 @@ app.get("/", async (req, res) => {
       "https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/index.json"
     );
     const jsonData = response.data;
+    console.log(jsonData);
 
     // Render the JSON data with the EJS template
     res.render("index", { jsonData });
@@ -30,6 +31,7 @@ app.get("/", async (req, res) => {
     const response = await axios.get(
       "https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/index.json"
     );
+    return response;
   } catch (error) {
     console.error("Error:", error);
     res.status(500).send("An error occurred");
